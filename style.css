@@ -1,0 +1,72 @@
+.container{
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(3,130px);
+    justify-content: center;
+}
+.box div{
+    border: 2px solid ;
+    padding: 5px;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.box div:hover::before{
+    content: attr(val);
+    color: rgb(198, 198, 198);
+}
+#b1,#b4,#b7{
+    border-left: 0px;
+}
+#b1,#b2,#b3{
+    border-top: 0px;
+}
+#b3,#b6,#b9{
+    border-right: 0px;
+}
+#b7,#b8,#b9{
+    border-bottom: 0px;
+}
+
+
+.scoreContainer{
+    margin-top: 3rem;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana;
+}
+.scoreContainer .sc{
+    font-size: 2.3rem;
+    font-family: Verdana;
+    align-self: center;
+}
+.scoreContainer .result{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid ;
+    margin-top: 1rem;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+.scoreContainer .result span{
+    font-weight: 100;
+}
+
+.restart{
+
+}
