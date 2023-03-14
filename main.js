@@ -12,14 +12,16 @@ let winPos = [
 ];
 
 var turn = 'X';
-box.addEventListener('mouseover', (e) => {
-    let x = e.target
-    if (x.innerHTML == '') {
-        x.setAttribute('val', turn)
-    } else {
-        
-        x.style.cursor = "not-allowed"
-    }
+z.forEach(li=>{
+    li.addEventListener('mouseover', (e) => {
+        let x = e.target
+        if (x.innerHTML == '') {
+            x.setAttribute('val', turn)
+        } else {
+            
+            x.style.cursor = "not-allowed"
+        }
+    })
 })
 
 
@@ -39,9 +41,6 @@ box.addEventListener('click', (e) => {
         restart.style.visibility = 'visible'
         win.innerHTML = "Draw"
     }
-    
-    
-        //onsole.log(x.getAttribute('rV'))
     
 })
 let r = ''
@@ -76,15 +75,9 @@ function winner(u){
         }
         r = ''
     }
-        
-    // console.log(count)
-        count++;
-   
-
-    
+        count++; 
 }
 restart.addEventListener('click',()=>{
-    // restart.classList.toggle(".")
     restart.style.visibility = 'hidden'
     reset();
 })
@@ -106,12 +99,13 @@ function newGame(){
     oScore.innerText = '0'
     xScore.innerText = '0'
     draw.innerText = '0'
+    oWin = 0;
+    xWin = 0;
+    dr = 0;
 }
 
 function winnerAnimation(arr){
     arr[0].forEach(i => {
         z[i].classList.add("anim");
-        console.log(z[i])
     });
 }
-//  console.log(wonBoxes)
