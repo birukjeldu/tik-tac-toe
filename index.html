@@ -8,31 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="container">
         <div class="box">
-            <div id="b1" val></div>
-            <div id="b2" val></div>
-            <div id="b3" val></div>
-            <div id="b4" val></div>
-            <div id="b5" val></div>
-            <div id="b6" val></div>
-            <div id="b7" val></div>
-            <div id="b8" val></div>
-            <div id="b9" val></div>
+            <div id="b1" val rV></div>
+            <div id="b2" val rV></div>
+            <div id="b3" val rV></div>
+            <div id="b4" val rV></div>
+            <div id="b5" val rV></div>
+            <div id="b6" val rV></div>
+            <div id="b7" val rV></div>
+            <div id="b8" val rV></div>
+            <div id="b9" val rV></div>
 
         </div>
         <div class="scoreContainer">
-            <div class="sc">Score</div>
+            <div class="sc"></div>
             <div class="result">
-                <div>X = <span id="xScore">0</span></div>
-                <div>O = <span id="oScore">0</span></div>
-                <div>Draw = <span id="draw">0</span></div>
+                <div>X<span id="xScore">0</span></div>
+                <div>O<span id="oScore">0</span></div>
+                <div>Tie<span id="draw">0</span></div>
             </div>
+            <button onclick="newGame()"> Reset</button>
             
         </div>
-        <div class="restart">
-
-        </div>
+        
+    </div>
+    <div class="restart">
+        <div class="win"></div>
+        <span>Click anywhere to continue</span>
     </div>
 
     <script src="main.js"></script>

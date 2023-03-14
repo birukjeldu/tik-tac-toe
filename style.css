@@ -1,7 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url('img/bg3.jpg');
+    
+}
 .container{
     padding: 10px;
     margin: 20px auto;
     max-width: 600px;
+    
 }
 
 
@@ -11,11 +20,12 @@
     justify-content: center;
 }
 .box div{
-    border: 2px solid ;
+    border: 2px solid #272727;
     padding: 5px;
     height: 100px;
     padding: 5px;
     display: flex;
+    color: #272727;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
@@ -26,6 +36,8 @@
 }
 .box div:hover::before{
     content: attr(val);
+    z-index: -1;
+    position: absolute;
     color: rgb(198, 198, 198);
 }
 #b1,#b4,#b7{
@@ -49,24 +61,106 @@
     flex-direction: column;
     font-family: Verdana;
 }
+.scoreContainer button{
+    padding: 0.9rem;
+    font-size: 20px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    width: 200px;
+    align-self: center;
+    box-shadow: 0px 0px 10px 2px rgba(95, 92, 92, 0.423);
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #bdbbbb;
+    border-radius: 3px;
+}
+.scoreContainer button:hover{
+    transform: scale(1.02);
+    background-color: #ffffff83;
+    transition: 0.1s ease-in;
+}
+.scoreContainer button:active{
+    background-color: #fff;
+}
 .scoreContainer .sc{
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: Verdana;
     align-self: center;
 }
 .scoreContainer .result{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     display: flex;
-    justify-content: space-around;
-    border: 1px solid ;
+    justify-content:space-evenly;
+    border: 1px solid transparent;
+    border-radius: 5px;
     margin-top: 1rem;
     padding: 10px 0px;
     font-weight: bold;
+    background: transparent;
+    box-shadow: 0px 0px 10px 1px rgba(95, 92, 92, 0.423);
 }
 .scoreContainer .result span{
     font-weight: 100;
+    font-size: 18px; 
+    border: 1px solid rgb(226, 223, 223);
+    border-radius: 5px;
+    background-color: rgb(44, 44, 44);
+    color: #fff;
+    margin: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(10, 10, 10, 0.423);
+    padding: 10px 25px;
+}
+.scoreContainer .result div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .restart{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    visibility: hidden;
+    justify-content: center;
+    border: 0px solid;
+    z-index: 100;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+.restart div{
+    position: absolute;
+    bottom: 20%;
+    color: rgb(16, 175, 88);
+}
+.restart span{
+    position: absolute;
+    bottom: 10%;
+    font-size: 18px;
+    color: rgb(245, 60, 60);
+    font-family: Verdana;
+    font-weight:bold;
+}
+.win{
+    font-size: 3rem;
+    font-family: Verdana;
+    color: white;
+    margin-top: 15rem;
+}
+.anim{
+    animation: blink 500ms 0.2s ease-in-out 5 forwards;
+    color: #2BAE66FF;
+}
+@keyframes blink{
+	0%{
+		color: #2BAE66FF;
+	}
+	50%{
+		color: rgb(198, 198, 198);
+	}
+	100%{
+		color: #2BAE66FF;
+	}
 
 }
